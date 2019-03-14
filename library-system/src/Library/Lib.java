@@ -17,7 +17,7 @@ public class Lib {
         userMap = new HashMap<>();
     }
 
-    public void rentBook​(User u, Book b) {
+    public void rentBook(User u, Book b) {
         if(bookMap.containsKey(b)) { bookMap.get(b).add(u); }
         else    { throw new IllegalArgumentException("No such book in the system"); }
     }
