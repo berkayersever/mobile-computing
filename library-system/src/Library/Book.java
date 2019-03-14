@@ -1,5 +1,7 @@
 package Library;
 
+import java.util.Arrays;
+
 public class Book implements Comparable<Book> {
   
     private String bookName;
@@ -55,8 +57,8 @@ public class Book implements Comparable<Book> {
     }
 
     @Override
-    public java.lang.String toString()
+    public String toString()
     {
-
+        return "BookName: " + this.bookName + ". Authors: " + Arrays.toString(this.getAuthors()).replace("[", "").replace("]", "");
     }
 }
