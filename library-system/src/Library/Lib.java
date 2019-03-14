@@ -18,6 +18,15 @@ public class Lib {
     }
 
     //rentBook method comes here
+    public void rentBook​(Lib lib, Book b)
+    {
+        if(bookMap.containsKey(b)){
+            bookMap.remove(b);
+        }
+        else
+            throw new IllegalArgumentException("No such book in the system");
+    }
+
 
     //printRentBooks method 1 comes here
 

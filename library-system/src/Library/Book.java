@@ -46,8 +46,17 @@ public class Book implements Comparable<Book> {
         return units;
     }
 
-    //method commpareTo comes here
+    public int compareTo​(Book b)
+    {
+        int result = b.getBookName().compareTo(this.getBookName());
+        if(result < 0)      {   return 1;   }
+        else if(result > 0) {   return -1;  }
+        else                {   return 0;   }
+    }
 
-   //method toString comes here
+    @Override
+    public java.lang.String toString()
+    {
 
+    }
 }
