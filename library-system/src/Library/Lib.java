@@ -31,7 +31,7 @@ public class Lib {
         }
     }
 
-    public void printRentBooks​(Admin u) {
+    public void printRentBooks(Admin u) {
         if(u.getClass() == Admin.class) {
             for(Map.Entry<Book, HashSet<User>> entry : bookMap.entrySet())
                 System.out.println(entry.getKey().getBookName() + ' ' + entry.getValue());
