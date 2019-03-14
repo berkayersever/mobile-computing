@@ -48,17 +48,18 @@ public class Book implements Comparable<Book> {
         return units;
     }
 
-    public int compareTo​(Book b)
+    @Override
+    public String toString()
+    {
+        return "BookName: " + this.bookName + ". Authors: " + Arrays.toString(this.getAuthors()).replace("[", "").replace("]", "");
+    }
+
+    @Override
+    public int compareTo(Book b)
     {
         int result = b.getBookName().compareTo(this.getBookName());
         if(result < 0)      {   return 1;   }
         else if(result > 0) {   return -1;  }
         else                {   return 0;   }
-    }
-
-    @Override
-    public String toString()
-    {
-        return "BookName: " + this.bookName + ". Authors: " + Arrays.toString(this.getAuthors()).replace("[", "").replace("]", "");
     }
 }

@@ -1,9 +1,7 @@
 package Users;
 
 import Library.Lib;
-
 import java.util.Date;
-
 
 public abstract class User {
    
@@ -18,7 +16,6 @@ public abstract class User {
         this.regDate = new Date();
     }
 
-
     abstract public void printRentBooks(Lib lib);
 
     public void setUserName(String name)
@@ -29,6 +26,11 @@ public abstract class User {
     public String getUserName()
     {
        return userName;
+    }
+
+    public Date getRegDate()
+    {
+        return regDate;
     }
 
     public void setUserId(int id)
