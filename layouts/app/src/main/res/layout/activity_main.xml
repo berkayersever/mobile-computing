@@ -44,6 +44,7 @@
         android:inputType="textPersonName"
         android:text="Task item"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,12 +68,15 @@
         android:id="@+id/criticalButton"
         android:layout_width="64dp"
         android:layout_height="64dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         app:backgroundTint="@color/Critical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/highButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_dialog_alert" />
 
     <ImageButton
@@ -105,12 +109,14 @@
         android:id="@+id/lowButton"
         android:layout_width="96dp"
         android:layout_height="64dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:layout_marginBottom="16dp"
         android:text="Low"
         android:textColor="@color/White"
         app:backgroundTint="@color/Low"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="269dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!--android:layout_width="wrap_content"-->
     <!--android:layout_height="wrap_content"-->
