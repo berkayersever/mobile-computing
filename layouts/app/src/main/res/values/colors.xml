@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="Critical">#DA0D0D</color>
+    <color name="High">#FF9800</color>
+    <color name="Medium">#EED921</color>
+    <color name="Low">#32BD38</color>
+    <color name="White">#FFFFFF</color>
 </resources>

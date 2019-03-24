@@ -28,21 +28,8 @@
         app:layout_constraintStart_toEndOf="@+id/label"
         app:layout_constraintTop_toBottomOf="@+id/taskDescription" />
 
-    <ImageButton
-        android:id="@+id/criticalButton1"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="#DA0D0D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_dialog_alert" />
+    <!--android:theme="@style/CriticalButton"-->
+    <!--android:text="Press me"-->
 
     <EditText
         android:id="@+id/taskItem"
@@ -75,5 +62,57 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/taskItem" />
+
+    <ImageButton
+        android:id="@+id/criticalButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="@color/Critical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/highButton"
+        app:srcCompat="@android:drawable/ic_dialog_alert" />
+
+    <ImageButton
+        android:id="@+id/highButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="@color/High"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mediumButton"
+        app:srcCompat="@mipmap/ic_exclamation_foreground" />
+
+    <ImageButton
+        android:id="@+id/mediumButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:rotation="180"
+        android:scaleType="fitCenter"
+        app:backgroundTint="@color/Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lowButton"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <Button
+        android:id="@+id/lowButton"
+        android:layout_width="96dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:text="Low"
+        android:textColor="@color/White"
+        app:backgroundTint="@color/Low"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="269dp" />
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
 
 </android.support.constraint.ConstraintLayout>
