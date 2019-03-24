@@ -8,4 +8,5 @@
     <color name="Medium">#EED921</color>
     <color name="Low">#32BD38</color>
     <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
 </resources>

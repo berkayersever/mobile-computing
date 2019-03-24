@@ -4,4 +4,8 @@
     <string name="task_item">"Task item"</string>
     <string name="critical">"Critical"</string>
     <string name="high">"High"</string>
+    <string name="medium">"Medium"</string>
+    <string name="low">"Low"</string>
+    <string name="calendar">"Open Calendar"</string>
+    <string name="reminder">"Remind On"</string>
 </resources>
