@@ -2,4 +2,6 @@
     <string name="app_name">Layouts</string>
     <string name="task_desc">"Task description"</string>
     <string name="task_item">"Task item"</string>
+    <string name="critical">"Critical"</string>
+    <string name="high">"High"</string>
 </resources>
