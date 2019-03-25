@@ -43,7 +43,7 @@
         android:layout_marginRight="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Task item"
+        android:text="@string/task_item"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,65 +59,97 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
+        android:hint="@string/task_desc"
         android:inputType="textPersonName"
-        android:text="Task description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/taskItem" />
 
+
     <ImageButton
         android:id="@+id/criticalButton"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
+        android:padding="16dp"
         app:backgroundTint="@color/Critical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/highButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_dialog_alert" />
+        app:srcCompat="@drawable/ic_warning_white_24dp" />
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/highButton"-->
+    <!--android:layout_width="64dp"-->
+    <!--android:layout_height="64dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginBottom="16dp"-->
+    <!--app:backgroundTint="@color/High"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/mediumButton"-->
+    <!--app:srcCompat="@mipmap/ic_exclamation_foreground" />-->
 
     <ImageButton
         android:id="@+id/highButton"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
+        android:padding="16dp"
         app:backgroundTint="@color/High"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mediumButton"
-        app:srcCompat="@mipmap/ic_exclamation_foreground" />
+        app:srcCompat="@drawable/ic_priority_high_white_24dp" />
 
     <ImageButton
         android:id="@+id/mediumButton"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
-        android:rotation="180"
-        android:scaleType="fitCenter"
+        android:padding="16dp"
         app:backgroundTint="@color/Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/lowButton"
-        app:srcCompat="@android:drawable/ic_menu_info_details" />
+        app:srcCompat="@drawable/ic_error_outline_white_24dp" />
+
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/mediumButton"-->
+    <!--android:layout_width="64dp"-->
+    <!--android:layout_height="64dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginBottom="16dp"-->
+    <!--android:rotation="180"-->
+    <!--android:scaleType="fitCenter"-->
+    <!--app:backgroundTint="@color/Medium"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/lowButton"-->
+    <!--app:srcCompat="@android:drawable/ic_menu_info_details" />-->
+
 
     <Button
         android:id="@+id/lowButton"
-        android:layout_width="96dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
         android:layout_marginBottom="16dp"
+        android:padding="19dp"
         android:text="Low"
         android:textColor="@color/White"
         app:backgroundTint="@color/Low"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
     <!--android:layout_width="wrap_content"-->
     <!--android:layout_height="wrap_content"-->

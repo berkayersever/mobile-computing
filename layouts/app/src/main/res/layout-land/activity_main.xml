@@ -9,7 +9,7 @@
     android:layout_weight="0.5"
     android:baselineAligned="false"
     tools:padding="16dp"
-    tools:context=".SecondActivity">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -19,7 +19,7 @@
         android:gravity="top|start">
 
         <EditText
-            android:id="@+id/taskDescription"
+            android:id="@+id/taskItem2"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -29,14 +29,10 @@
             android:layout_marginRight="16dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="@string/task_desc" tools:text="@string/task_desc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/taskItem"/>
-            <!--android:text="Task description"-->
+            android:text="@string/task_item"/>
 
         <EditText
-            android:id="@+id/taskItem"
+            android:id="@+id/taskDescription2"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -46,11 +42,7 @@
             android:layout_marginRight="16dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="@string/task_item" tools:text="@string/task_item"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:hint="@string/task_desc"/>
     </LinearLayout>
 
     <LinearLayout
@@ -67,16 +59,16 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/label"
+                android:id="@+id/label2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="@string/reminder"/>
+                android:text="@string/reminder"/>
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="@string/calendar"
+                android:text="@string/calendar"
                 app:layout_constraintStart_toEndOf="@+id/label"
                 app:layout_constraintTop_toBottomOf="@+id/taskDescription" />
         </LinearLayout>
@@ -86,47 +78,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/Black"
-            tools:text="@string/critical"
+            android:text="@string/critical"
+            android:drawableLeft="@android:drawable/stat_sys_warning"
             tools:layout_width="match_parent"
             app:backgroundTint="@color/Critical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:drawableLeft="@android:drawable/stat_sys_warning"/>
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <Button
             android:id="@+id/highButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/Black"
-            tools:text="@string/high"
+            android:text="@string/high"
+            android:drawableLeft="@android:drawable/stat_sys_warning"
             tools:layout_width="match_parent"
             app:backgroundTint="@color/High"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:drawableLeft="@android:drawable/stat_sys_warning"/>
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <Button
             android:id="@+id/mediumButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/Black"
-            tools:text="@string/medium"
+            android:text="@string/medium"
+            android:drawableLeft="@android:drawable/stat_sys_warning"
             tools:layout_width="match_parent"
             app:backgroundTint="@color/Medium"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:drawableLeft="@android:drawable/stat_sys_warning"/>
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <Button
             android:id="@+id/lowButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/Black"
-            tools:text="@string/low"
+            android:text="@string/low"
+            android:drawableLeft="@android:drawable/stat_sys_warning"
             tools:layout_width="match_parent"
             app:backgroundTint="@color/Low"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:drawableLeft="@android:drawable/stat_sys_warning"/>
+            app:layout_constraintStart_toStartOf="parent"/>
     </LinearLayout>
 </LinearLayout>
