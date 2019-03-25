@@ -9,4 +9,5 @@
     <color name="Low">#32BD38</color>
     <color name="White">#FFFFFF</color>
     <color name="Black">#000000</color>
+    <color name="Red">#FF0000</color>
 </resources>
