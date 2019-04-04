@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements EventAdapter.Even
         RadioGroup radioGroup = findViewById(R.id.sort);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        eventAdapter = new EventAdapter(eventList,this);
+        eventAdapter = new EventAdapter(eventList, this);
         recyclerView.setAdapter(eventAdapter);
 
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements EventAdapter.Even
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i) {
                     case R.id.sortPriority:
-                        Collections.sort(eventList, new PriorityComperator());
+                        Collections.sort(eventList, new PriorityComparator());
                         updateUI();
                         break;
                     case R.id.sortDate:
@@ -74,9 +74,11 @@ public class MainActivity extends AppCompatActivity implements EventAdapter.Even
         });
     }
 
-    public void updateUI() { eventAdapter.notifyDataSetChanged(); }
+    public void updateUI() {
+        eventAdapter.notifyDataSetChanged();
+    }
 
-    private class PriorityComperator implements Comparator<Event> {
+    private class PriorityComparator implements Comparator<Event> {
 
         public int compare(Event event1, Event event2) {
             return Integer.valueOf(event2.getPriority()).compareTo(event1.getPriority());
@@ -91,5 +93,7 @@ public class MainActivity extends AppCompatActivity implements EventAdapter.Even
     }
 
     @Override
-    public void onItemClick(int index) { updateUI(); }
+    public void onItemClick(int index) {
+        updateUI();
+    }
 }
