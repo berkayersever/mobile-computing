@@ -16,14 +16,43 @@ public class Event {
         this.status = status;
     }
 
-    public String getTitle()                { return title; }
-    public String getNote()                 { return note; }
-    public Date getDate()                   { return date; }
-    public int getPriority()                { return priority; }
-    public Boolean getStatus()              { return status; }
-    public void setTitle(String title)      { this.title = title; }
-    public void setNote(String note)        { this.note = note; }
-    public void setDate(Date date)          { this.date = date; }
-    public void setPriority(int priority)   { this.priority = priority; }
-    public void setStatus(Boolean status)   { this.status = status; }
+    public String getTitle() {
+        return title;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
 }

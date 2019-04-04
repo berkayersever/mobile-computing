@@ -45,7 +45,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:text="Priority"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:buttonTint="@color/blue" />
 
             <RadioButton
                 android:id="@+id/sortDate"
@@ -53,9 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:text="Date"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:buttonTint="@color/blue" />
         </RadioGroup>
     </LinearLayout>
-
-
 </LinearLayout>
