@@ -17,13 +17,13 @@ import java.util.GregorianCalendar;
 import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
 
 public class DetailsActivity extends AppCompatActivity {
+
     private int index;
     private Button saveButton;
     private CalendarView calendarView;
     private DetailsViewModel viewModel;
     private EditText titleEdit, descriptionEdit;
     private SeekBar priorityBar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +85,6 @@ public class DetailsActivity extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
-
 
         titleEdit.addTextChangedListener(new TextWatcher() {
             @Override

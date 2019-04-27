@@ -64,10 +64,10 @@ public class ReminderViewModel extends ViewModel {
         reminder.setStatus(! reminder.getStatus());
         liveReminderList.setValue(list);
     }
-    public void updateReminder(int index, String name, String note, int priority, Long time) {
+    public void updateReminder(int index, String title, String note, int priority, Long time) {
         List <Reminder> list = getReminderList();
         Reminder reminder = list.get(index);
-        reminder.setTitle(name);
+        reminder.setTitle(title);
         reminder.setNote(note);
         reminder.setTime(time);
         reminder.setPriority(priority);
