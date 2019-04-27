@@ -17,19 +17,16 @@ import java.util.List;
 public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyViewHolder> {
     private List<Reminder> reminderList;
     private EventHandler eventHandler;
-
     public ReminderAdapter(EventHandler eventHandler, List<Reminder> reminderList) {
         this.reminderList = reminderList;
         this.eventHandler = eventHandler;
     }
-
     @NonNull
     @Override
     public ReminderAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.event, viewGroup, false);
         return new MyViewHolder(itemView);
     }
-
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder myViewHolder, int i) {
         final Reminder reminder = reminderList.get(i);
@@ -50,13 +47,11 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return reminderList.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
         private View rowView;
         private TextView nameView;
         private TextView noteView;
@@ -65,7 +60,6 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
         private SeekBar priorityBar;
         private Switch activeSwitch;
         private ImageView avatarView;
-
         MyViewHolder(View rowView) {
             super(rowView);
             this.rowView = rowView;
@@ -90,30 +84,17 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                     if (fromUser) { eventHandler.onPriorityBarChange(getAdapterPosition(), seekBar.getProgress()); }
                 }
-
                 @Override
-                public void onStartTrackingTouch(SeekBar seekBar) {
-                }
-
+                public void onStartTrackingTouch(SeekBar seekBar) {}
                 @Override
-                public void onStopTrackingTouch(SeekBar seekBar) {
-
-                }
+                public void onStopTrackingTouch(SeekBar seekBar) {}
             });
-
-
         }
     }
-
     interface EventHandler {
         void onCancelButtonClick(int index);
-
         void onPriorityBarChange(int index, int value);
-
         void onSwitchChange(int index);
-
         void onReminderClick(int index);
     }
-
-
 }
