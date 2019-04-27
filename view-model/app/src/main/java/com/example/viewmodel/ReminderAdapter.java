@@ -21,12 +21,14 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
         this.reminderList = reminderList;
         this.eventHandler = eventHandler;
     }
+
     @NonNull
     @Override
     public ReminderAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.event, viewGroup, false);
         return new MyViewHolder(itemView);
     }
+
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder myViewHolder, int i) {
         final Reminder reminder = reminderList.get(i);
@@ -47,6 +49,7 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
             }
         });
     }
+
     @Override
     public int getItemCount() {
         return reminderList.size();
