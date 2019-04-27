@@ -75,7 +75,7 @@ public class Reminder {
         public int compare(Reminder o1, Reminder o2) {
             Integer p1 = o1.getPriority();
             Integer p2 = o2.getPriority();
-            return p2.compareTo(p1);        // Higher priority
+            return p2.compareTo(p1);
         }
     }
 }
