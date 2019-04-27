@@ -65,11 +65,11 @@ public class RemindersActivity extends AppCompatActivity implements ReminderAdap
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if(checkedId == R.id.dateButton)
+                if (checkedId == R.id.dateButton)
                 {
                     viewModel.sortByDate();
                 }
-                else if(checkedId == R.id.priorityButton)
+                else if (checkedId == R.id.priorityButton)
                 {
                     viewModel.sortByPriority();
                 }

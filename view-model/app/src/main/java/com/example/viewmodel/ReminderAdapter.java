@@ -42,7 +42,6 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         int month = calendar.get(Calendar.MONTH);
         String dateStr = day + " " + new DateFormatSymbols().getMonths()[month];
-        // String dateStr = String.valueOf(day) + " " + new DateFormatSymbols().getMonths()[month];
         myViewHolder.dateView.setText(dateStr);
         myViewHolder.rowView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,8 +69,6 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
         MyViewHolder(View rowView) {
             super(rowView);
             this.rowView = rowView;
-
-
             nameView = rowView.findViewById(R.id.nameView);
             noteView = rowView.findViewById(R.id.noteView);
             dateView = rowView.findViewById(R.id.dateView);
@@ -79,30 +76,19 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
             priorityBar = rowView.findViewById(R.id.priorityBar);
             activeSwitch = rowView.findViewById(R.id.activeSwitch);
             avatarView = rowView.findViewById(R.id.avatarView);
-
             avatarView.setImageResource(R.mipmap.ic_launcher_account);
-
             activeSwitch.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    eventHandler.onSwitchChange(getAdapterPosition());
-                }
+                public void onClick(View v) { eventHandler.onSwitchChange(getAdapterPosition()); }
             });
-
             cancelButton.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    eventHandler.onCancelButtonClick(getAdapterPosition());
-                }
+                public void onClick(View v) { eventHandler.onCancelButtonClick(getAdapterPosition()); }
             });
-
             priorityBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                 @Override
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-                    if (fromUser)
-                        eventHandler.onPriorityBarChange(getAdapterPosition(), seekBar.getProgress());
-
+                    if (fromUser) { eventHandler.onPriorityBarChange(getAdapterPosition(), seekBar.getProgress()); }
                 }
 
                 @Override

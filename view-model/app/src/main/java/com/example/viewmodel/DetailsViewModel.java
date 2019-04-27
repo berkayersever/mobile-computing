@@ -51,7 +51,7 @@ public class DetailsViewModel extends ViewModel {
         liveNote.setValue(note);
     }
     public void setPriority(int priority) {
-        if(priority <= 4 && priority >= 0) { livePriority.setValue(priority); }
+        if (priority <= 4 && priority >= 0) { livePriority.setValue(priority); }
     }
 
     /* Methods */
