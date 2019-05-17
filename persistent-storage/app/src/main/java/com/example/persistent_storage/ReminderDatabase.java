@@ -6,7 +6,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-@Database(entities = {Reminder.class}, version = 4)
+@Database(entities = {Reminder.class}, version = 4, exportSchema = false)
 @TypeConverters(CalendarConverter.class)
 public abstract class ReminderDatabase extends RoomDatabase {
     public abstract ReminderDao getReminderDao();
