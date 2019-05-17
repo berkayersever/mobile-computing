@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Persistent-Storage</string>
+    <string name="date">Date</string>
+    <string name="name">Name</string>
+    <string name="note">Note</string>
+    <string name="save">Save</string>
+    <string name="avatar">Avatar</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="populate">Populate</string>
+</resources>
